@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { items } from "../items/Items";
+import { Items } from "../items/Items";
+import AsciiArt from "../ASCII/Ascii";
 
 export default function Main() {
   const [selectedItems, setSelectedItems] = useState<
@@ -100,6 +101,10 @@ export default function Main() {
 
   return (
     <div className="p-4 bg-black text-green-300 font-mono text-xs">
+      <div className="flex justify-center mb-4">
+        <AsciiArt />
+      </div>
+
       {/* Selected Items Section */}
       <div className="mb-4 p-3 sticky top-0 bg-black border-b border-green-600 z-50 shadow-md">
         <h2 className="text-sm font-semibold">[ SELECTED ITEMS ]</h2>
@@ -145,7 +150,7 @@ export default function Main() {
                     className="w-10 text-center bg-black text-green-400 border border-green-500 rounded-sm text-xs"
                   />
                   <p className="text-xs">
-                    💰 $
+                    $
                     {item.price
                       ? (item.price * item.quantity).toFixed(2)
                       : "Loading..."}
@@ -174,12 +179,12 @@ export default function Main() {
           target="_blank"
           className="px-3 py-1 bg-green-500 hover:bg-green-600 text-black font-bold rounded-md text-xs shadow-md transition"
         >
-          Buy
+          Buy Selected Item In Group at Amazon
         </a>
       </div>
 
       {/* Item Selection Section */}
-      {Object.entries(items).map(([category, categoryItems]) => (
+      {Object.entries(Items).map(([category, categoryItems]) => (
         <div key={category} className="mb-4">
           <h3 className="text-sm border-b border-green-600 pb-1 font-semibold flex items-center gap-2">
             [ {category.toUpperCase()} ]

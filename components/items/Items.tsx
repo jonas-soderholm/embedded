@@ -1,4 +1,4 @@
-export const items = {
+export const Items = {
   Breadboards: [
     {
       name: "BusBoard BB830 Solderless Breadboard",
