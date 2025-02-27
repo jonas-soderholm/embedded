@@ -5,6 +5,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
+body,
+code,
+pre {
+  font-family: "Ubuntu Mono", "DejaVu Sans Mono", "Liberation Mono", monospace !important;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
