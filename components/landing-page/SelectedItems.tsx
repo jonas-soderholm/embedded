@@ -32,7 +32,7 @@ export default function SelectedItems({
   containerRef,
 }: SelectedItemsProps) {
   return (
-    <div className=" sticky top-0 bg-black z-50">
+    <div className=" sticky top-0 bg-[#00000091] z-50">
       <h2 className="text-sm bg-color pl-2">[SELECTED ITEMS]</h2>
 
       <div className="relative w-full">

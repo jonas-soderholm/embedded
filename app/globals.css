@@ -26,7 +26,7 @@ pre {
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #cf1717;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,8 +38,12 @@ pre {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  /* background: var(--background); */
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url("/images/grid.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .retro-shadow {
@@ -62,7 +66,7 @@ body {
 }
 
 .bg-color-items {
-  background-color: #2c2217;
+  background-color: #2c2217af;
   background-image: radial-gradient(circle, #000000 1px, transparent 1px);
   background-size: 10px 10px; /* Adjusts dot spacing */
   background-position: center;

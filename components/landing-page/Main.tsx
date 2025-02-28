@@ -104,9 +104,9 @@ export default function Main() {
   }, []);
 
   return (
-    <div className="p-2 bg-black text-slate-200 font-mono text-xs border border-gray-600">
-      <div className="p-[2px] bg-black text-slate-200 font-mono text-xs border border-gray-600">
-        <div className="px-4 bg-black text-slate-200 font-mono text-xs border border-gray-600">
+    <div className="p-2  text-slate-200 font-mono text-xs border border-gray-600">
+      <div className="p-[2px]  text-slate-200 font-mono text-xs border border-gray-600">
+        <div className="px-4  text-slate-200 font-mono text-xs border border-gray-600">
           <div className="flex justify-center">
             <AsciiArt />
           </div>
