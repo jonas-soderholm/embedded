@@ -104,27 +104,31 @@ export default function Main() {
   }, []);
 
   return (
-    <div className="p-4 bg-black text-slate-200 font-mono text-xs">
-      <div className="flex justify-center">
-        <AsciiArt />
+    <div className="p-2 bg-black text-slate-200 font-mono text-xs border border-gray-600">
+      <div className="p-[2px] bg-black text-slate-200 font-mono text-xs border border-gray-600">
+        <div className="px-4 bg-black text-slate-200 font-mono text-xs border border-gray-600">
+          <div className="flex justify-center">
+            <AsciiArt />
+          </div>
+
+          <SelectedItems
+            selectedItems={selectedItems}
+            totalPrice={totalPrice}
+            updateQuantity={updateQuantity}
+            scrollLeft={scrollLeft}
+            scrollRight={scrollRight}
+            canScrollLeft={canScrollLeft}
+            canScrollRight={canScrollRight}
+            containerRef={selectedItemsContainerRef}
+          />
+
+          <ItemSelection
+            Items={Items}
+            toggleItem={toggleItem}
+            selectedItems={selectedItems}
+          />
+        </div>
       </div>
-
-      <SelectedItems
-        selectedItems={selectedItems}
-        totalPrice={totalPrice}
-        updateQuantity={updateQuantity}
-        scrollLeft={scrollLeft}
-        scrollRight={scrollRight}
-        canScrollLeft={canScrollLeft}
-        canScrollRight={canScrollRight}
-        containerRef={selectedItemsContainerRef}
-      />
-
-      <ItemSelection
-        Items={Items}
-        toggleItem={toggleItem}
-        selectedItems={selectedItems}
-      />
     </div>
   );
 }

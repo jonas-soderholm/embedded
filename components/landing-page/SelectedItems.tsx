@@ -32,8 +32,8 @@ export default function SelectedItems({
   containerRef,
 }: SelectedItemsProps) {
   return (
-    <div className="mb-8 sticky top-0 bg-black z-50">
-      <h2 className="text-sm font-semibold mb-1">[ SELECTED ITEMS ]</h2>
+    <div className=" sticky top-0 bg-black z-50">
+      <h2 className="text-sm bg-color pl-2">[SELECTED ITEMS]</h2>
 
       <div className="relative w-full">
         {/* Left Scroll Button */}
@@ -41,7 +41,7 @@ export default function SelectedItems({
           <button
             onClick={scrollLeft}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black 
-            bg-opacity-60 p-2 text-green-400 hover:bg-opacity-90 z-10 border border-green-600"
+            bg-opacity-60 p-2 text-color hover:bg-opacity-90 z-10 border border-color "
           >
             {"<"}
           </button>
@@ -50,21 +50,21 @@ export default function SelectedItems({
         {/* Scrollable Items Container using the passed ref */}
         <div
           ref={containerRef}
-          className="flex gap-2 overflow-x-auto flex-nowrap border p-4 border-green-600 scrollbar-hide scroll-smooth"
+          className="flex gap-2 overflow-x-auto flex-nowrap border p-4 border-color  scrollbar-hide scroll-smooth"
           style={{
             scrollbarWidth: "none", // Firefox
             msOverflowStyle: "none", // IE/Edge
           }}
         >
           {selectedItems.length === 0 ? (
-            <p className="text-green-400 text-xs">No items selected</p>
+            <p className="text-color text-xs">No items selected</p>
           ) : (
             selectedItems.map((item) => (
               <div
                 key={item.name}
                 className="bg-green-900 p-2 text-center flex flex-col items-center h-[150px] w-[250px] max-w-[250px] shrink-0"
               >
-                <img src={item.image} alt={item.name} className="h-15" />
+                <img src={item.image} alt={item.name} className="h-10" />
                 <p className="text-xs leading-tight">{item.name}</p>
                 {/* Custom Quantity Control */}
                 <div className="flex items-center mt-1">
@@ -104,23 +104,24 @@ export default function SelectedItems({
           <button
             onClick={scrollRight}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 p-2
-             text-green-400 hover:bg-opacity-90 z-10 border border-green-600"
+             text-green-400 hover:bg-opacity-90 z-10 border border-green-600 "
           >
             {">"}
           </button>
         )}
       </div>
 
-      <p className="mt-2 text-xs font-bold mb-2">
+      <p className="mt-2 text-xs font-bold mb-3.5">
         Total: ${totalPrice.toFixed(2)}
       </p>
       <a
         href="https://www.amazon.com/gp/cart/view.html?tag=yourAffiliateID"
         target="_blank"
-        className="px-3 py-2 bg-green-500 hover:bg-green-600 text-black font-bold text-xs  transition"
+        className="px-3 py-2 border border-color bg-button  text-color font-bold text-xs transition shadow-[2px_2px_0px_white] bg-black"
       >
         Buy Bundle at Amazon
       </a>
+      <div className="bg-black h-2 mb-8"></div>
     </div>
   );
 }

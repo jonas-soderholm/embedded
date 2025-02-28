@@ -23,19 +23,22 @@ export default function ItemSelection({
   return (
     <>
       {Object.entries(Items).map(([category, categoryItems]) => (
-        <div key={category} className="mb-4 ">
-          <h3 className="text-sm pb-1 font-semibold flex items-center gap-2 ">
-            [ {category.toUpperCase()} ]
-          </h3>
-          <div className="flex gap-2 overflow-x-auto flex-nowrap border p-4 border-green-600 pt-4 scrollbar-hide">
+        <div key={category} className="mb-8 bg-color-items">
+          {/* Header */}
+          <div className="text-sm flex items-center gap-4 justify-center">
+            <div className="header-color py-1 absolute shadow-[6px_6px_0px_black]">
+              [{category.toUpperCase()}]
+            </div>
+          </div>
+          <div className="flex gap-2 overflow-x-auto flex-nowrap border p-6 border-color pt-8 scrollbar-hide ">
             {categoryItems.map((item) => (
               <div
                 key={item.name}
                 onClick={() => toggleItem(item)}
-                className={`cursor-pointer p-2 text-green-600 border text-center h-[200px] w-[250px] min-w-[150px] max-w-[250px] flex flex-col justify-center items-center ${
+                className={`cursor-pointer p-2 text-color border text-center h-[200px] w-[250px] min-w-[150px] max-w-[250px] flex flex-col justify-center items-center retro-shadow hover:bg-slate-900 transition-colors   ${
                   selectedItems.some((i) => i.name === item.name)
                     ? "border-slate-500 bg-slate-900 bg-opacity-80"
-                    : "border-slate-300"
+                    : "border-slate-300 bg-slate-700 "
                 }`}
               >
                 <img

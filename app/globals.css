@@ -11,6 +11,19 @@ pre {
   font-family: "Ubuntu Mono", "DejaVu Sans Mono", "Liberation Mono", monospace !important;
 }
 
+/* @font-face {
+  font-family: "Px437 IBM VGA8";
+  src: url("/fonts/Ac437_ToshibaSat_8x14.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+code,
+pre {
+  font-family: "Px437 IBM VGA8", monospace !important;
+} */
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -27,4 +40,43 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.retro-shadow {
+  position: relative;
+  color: #00ff00;
+
+  /* Pixel-dotted shadow effect */
+  box-shadow: 8px 8px 0px #000000;
+
+  /* Makes sure the dots stay pixelated */
+  image-rendering: pixelated;
+}
+
+.border-color {
+  border-color: #a36e0a;
+}
+
+.bg-color {
+  background-color: #a36e0a;
+}
+
+.bg-color-items {
+  background-color: #2c2217;
+  background-image: radial-gradient(circle, #000000 1px, transparent 1px);
+  background-size: 10px 10px; /* Adjusts dot spacing */
+  background-position: center;
+}
+
+.text-color {
+  color: #c78728;
+}
+
+.header-color {
+  background-color: #9c0505;
+}
+
+/* hover */
+.bg-button:hover {
+  background-color: #1a140d;
 }
