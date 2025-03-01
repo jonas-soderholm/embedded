@@ -23,14 +23,14 @@ export default function ItemSelection({
   return (
     <>
       {Object.entries(Items).map(([category, categoryItems]) => (
-        <div key={category} className="mb-8 bg-color-items">
+        <div key={category} className="mb-8">
           {/* Header */}
           <div className="text-sm flex items-center gap-4 justify-center">
             <div className="header-color py-1 absolute shadow-[6px_6px_0px_black]">
               [{category.toUpperCase()}]
             </div>
           </div>
-          <div className="flex gap-2 overflow-x-auto flex-nowrap border p-6 border-color pt-8 scrollbar-hide ">
+          <div className="flex gap-2 overflow-x-auto flex-nowrap p-6 border-color-items pt-8 scrollbar-hide ">
             {categoryItems.map((item) => (
               <div
                 key={item.name}

@@ -38,12 +38,12 @@ pre {
 
 body {
   color: var(--foreground);
-  /* background: var(--background); */
+  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url("/images/grid.jpg");
+  /* background-image: url("/images/grid.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 
 .retro-shadow {
@@ -59,6 +59,11 @@ body {
 
 .border-color {
   border-color: #a36e0a;
+}
+
+.border-color-items {
+  border-color: #ffffff;
+  border-width: 1px;
 }
 
 .bg-color {

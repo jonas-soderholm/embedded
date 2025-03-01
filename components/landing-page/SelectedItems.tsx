@@ -64,7 +64,7 @@ export default function SelectedItems({
                 key={item.name}
                 className="bg-green-900 p-2 text-center flex flex-col items-center h-[150px] w-[250px] max-w-[250px] shrink-0"
               >
-                <img src={item.image} alt={item.name} className="h-10" />
+                {/* <img src={item.image} alt={item.name} className="h-10" /> */}
                 <p className="text-xs leading-tight">{item.name}</p>
                 {/* Custom Quantity Control */}
                 <div className="flex items-center mt-1">

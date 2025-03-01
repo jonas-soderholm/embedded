@@ -29,7 +29,7 @@ const AsciiArt = ({ speed = 0.5 }) => {
     <>
       <div className="flex-row">
         <pre
-          className="lg:text-[18px] md:text-[10px] text-[5px] text-center"
+          className="lg:text-[18px] md:text-[10px] text-[5px] text-center font-extrabold"
           style={{
             fontFamily: "monospace",
             whiteSpace: "pre",
