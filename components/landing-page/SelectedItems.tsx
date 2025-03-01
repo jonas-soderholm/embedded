@@ -9,6 +9,7 @@ interface SelectedItemType {
   affiliateLink: string;
   quantity: number;
   price: number | null;
+  wiresNeeded?: number; // ✅ Added to track wire count
 }
 
 interface SelectedItemsProps {
@@ -24,6 +25,11 @@ export default function SelectedItems({
 }: SelectedItemsProps) {
   const { containerRef, scrollLeft, scrollRight } = useSelectedItemsScroll();
 
+  // ✅ Calculate total number of wires needed
+  const totalWiresNeeded = selectedItems.reduce((total, item) => {
+    return total + (item.wiresNeeded ? item.wiresNeeded * item.quantity : 0);
+  }, 0);
+
   return (
     <div className="sticky top-0 bg-[#000000e1] z-50 mb-8">
       <h2 className="text-sm bg-color pl-2 pt-[4px]">[SELECTED ITEMS]</h2>
@@ -37,7 +43,7 @@ export default function SelectedItems({
           {"<"}
         </button>
 
-        {/* Scrollable Items Container (Now Forces Scrollbar) */}
+        {/* Scrollable Items Container */}
         <div
           ref={containerRef}
           className="flex gap-2 overflow-x-auto flex-nowrap border p-4 border-color custom-scrollbar scroll-smooth"
@@ -53,7 +59,7 @@ export default function SelectedItems({
             selectedItems.map((item) => (
               <div
                 key={item.name}
-                className="border-color-items p-2 text-center flex flex-col items-center h-[150px] w-[250px] max-w-[250px] shrink-0 justify-between "
+                className="border-color-items p-2 text-center flex flex-col items-center h-[150px] w-[250px] max-w-[250px] shrink-0 justify-between"
               >
                 {/* Item Name */}
                 <p className="text-xs leading-tight text-color">{item.name}</p>
@@ -88,6 +94,14 @@ export default function SelectedItems({
                     ? (item.price * item.quantity).toFixed(2)
                     : "Loading..."}
                 </p>
+
+                {/* ✅ Wires Needed Per Item */}
+                {item.wiresNeeded !== undefined && (
+                  <p className="text-xs text-gray-400">
+                    <span className="font-bold">Wires Needed:</span>{" "}
+                    {item.wiresNeeded * item.quantity}
+                  </p>
+                )}
               </div>
             ))
           )}
@@ -102,9 +116,9 @@ export default function SelectedItems({
         </button>
       </div>
 
-      {/* ✅ Total Price */}
+      {/* ✅ Total Price & Total Wires Needed */}
       <p className="mt-2 text-xs font-bold mb-3.5">
-        Total: ${totalPrice.toFixed(2)}
+        Total: ${totalPrice.toFixed(2)} | Wires Needed: {totalWiresNeeded}
       </p>
 
       {/* ✅ Amazon Affiliate Link */}

@@ -67,9 +67,12 @@ const AsciiArt = ({ speed = 0.5 }) => {
       </div>
       <div className="flex justify-center border border-slate-200 max-w-[800px] p-[2px] text-center mt-4 sm:text-[15px] text-[10px] mx-4 mb-4">
         <div className="p-2 border border-slate-200">
-          Start embedded coding with a Raspberry Pi 4 + USB-C power. Test with
-          its built-in light. For LCD or extras, use a breadboard + jumper wires
-          (M-M, M-F, F-F).
+          Start embedded coding with a microcontroller and USB power. All
+          microcontrollers work on Windows, macOS, and Linux. All listed
+          microcontrollers (except Raspberry Pi 4) include a built-in LED for
+          quick testing. To connect an LCD or other components, add a
+          prototyping board and a Jumper Wires Kit (includes 20 wires: 50 M-M,
+          50 M-F, 40 F-F).
         </div>
       </div>
     </div>

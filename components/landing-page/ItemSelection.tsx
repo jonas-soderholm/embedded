@@ -7,6 +7,7 @@ interface ItemType {
   image: string;
   affiliateLink: string;
   price: number | null;
+  wiresNeeded?: number; // ✅ Added to show required wires
   codeType?: string;
 }
 
@@ -91,6 +92,22 @@ export default function ItemSelection({
                         <p className="text-xs text-gray-400">
                           <span className="font-bold">Code:</span>{" "}
                           {item.codeType}
+                        </p>
+                      )}
+
+                      {/* ✅ Display Price */}
+                      <p className="text-xs text-gray-400">
+                        <span className="font-bold">Price:</span>{" "}
+                        {item.price !== null
+                          ? `$${item.price.toFixed(2)}`
+                          : "Not Available"}
+                      </p>
+
+                      {/* ✅ Display Required Wires (if applicable) */}
+                      {item.wiresNeeded !== undefined && (
+                        <p className="text-xs text-gray-400">
+                          <span className="font-bold">Wires Needed:</span>{" "}
+                          {item.wiresNeeded}
                         </p>
                       )}
                     </div>
