@@ -33,7 +33,7 @@ export default function SelectedItems({
 }: SelectedItemsProps) {
   return (
     <div className=" sticky top-0 bg-[#000000e1] z-50">
-      <h2 className="text-sm bg-color pl-2">[SELECTED ITEMS]</h2>
+      <h2 className="text-sm bg-color pl-2 pt-[4px]">[SELECTED ITEMS]</h2>
 
       <div className="relative w-full">
         {/* Left Scroll Button */}

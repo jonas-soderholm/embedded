@@ -47,13 +47,15 @@ body {
 
 .retro-shadow {
   position: relative;
-  color: #00ff00;
-
   /* Pixel-dotted shadow effect */
   box-shadow: 11px 11px 0px #222222;
 
   /* Makes sure the dots stay pixelated */
   image-rendering: pixelated;
+}
+
+.retro-shadow-items {
+  box-shadow: 6px 6px 0px #6e6e6e;
 }
 
 .border-color {
