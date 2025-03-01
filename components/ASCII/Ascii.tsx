@@ -29,7 +29,7 @@ const AsciiArt = ({ speed = 0.5 }) => {
     <>
       <div className="flex-row">
         <pre
-          className="lg:text-[18px] md:text-[10px] text-[5px] text-center font-extrabold"
+          className="xl:text-[18px] lg:text-[12px] md:text-[10px] text-[3.5px] text-center font-extrabold"
           style={{
             fontFamily: "monospace",
             whiteSpace: "pre",
@@ -54,13 +54,11 @@ const AsciiArt = ({ speed = 0.5 }) => {
         <div className="flex !text-slate-200 justify-center md:mt-[-5px] mt-[7px] text-center md:text-[17px] text-[11px]">
           Click on product to add, checkout the bundle to Amazon.
         </div>
-        <div className="flex justify-center mb-4 text-center p-2 mt-6 border max-w-[800px] border-slate-200 md:text-[15px] text-[10px] mx-[17px] md:mx-auto ">
+        <div className="flex justify-center mb-4 text-center p-2 mt-6 border max-w-[800px] border-slate-200 md:text-[15px] text-[10px] mx-[11px] md:mx-auto">
           <div className="p-2 m-[-8px] border border-slate-200">
-            To start learning embedded coding you could start with a Raspberry
-            Pi 4 and a matching USB-C power cable for a simple kit to test with
-            the built-in light. To add an LCD or other components, you'll need a
-            breadboard and a jumper wires kit (from the cable section, 40+
-            pieces, M-M, M-F, F-F) to connect everything properly.
+            Start embedded coding with a Raspberry Pi 4 + USB-C power. Test with
+            its built-in light. For LCD or extras, use a breadboard + jumper
+            wires (M-M, M-F, F-F).
           </div>
         </div>
       </div>

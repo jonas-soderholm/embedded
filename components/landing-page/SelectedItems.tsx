@@ -48,7 +48,7 @@ export default function SelectedItems({
           }}
         >
           {selectedItems.length === 0 ? (
-            <p className="text-color text-xs">No items selected</p>
+            <p className="text-color text-xs ml-4">No items selected</p>
           ) : (
             selectedItems.map((item) => (
               <div
