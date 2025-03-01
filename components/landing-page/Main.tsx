@@ -2,12 +2,11 @@
 
 import { useEffect, useState, useRef, use } from "react";
 import AsciiArt from "../ASCII/Ascii";
-import { Items } from "../items/Items";
+import { Items } from "../items/Products";
 import SelectedItems from "./SelectedItems";
 import ItemSelection from "./ItemSelection";
-import axios from "axios";
-import { getUser } from "@/actions";
-import { time } from "console";
+import ProductDisplay from "./ProductArtDisplay";
+import { ProductArt } from "../items/ProductArt";
 
 export default function Main() {
   const [selectedItems, setSelectedItems] = useState<
@@ -106,23 +105,17 @@ export default function Main() {
     fetchPrices();
   }, []);
 
-  // const lol = await getUser();
-
   return (
-    <div className="p-2  text-slate-200 font-mono text-xs border border-gray-600">
-      <div className="p-[2px]  text-slate-200 font-mono text-xs border border-gray-600">
-        <div className="px-4  text-slate-200 font-mono text-xs border border-gray-600">
+    <div className="h-screen flex flex-col p-2 text-slate-200 font-mono text-xs box-border">
+      {/* Outer Border Frame */}
+      <div className="flex flex-col flex-grow p-[2px] border border-gray-600 box-border">
+        {/* Inner Border Frame */}
+        <div className="flex flex-col flex-grow px-4 border border-gray-600 box-border">
           <div className="flex justify-center">
             <AsciiArt />
           </div>
 
-          {/* {lol.map((person) => (
-            <div key={person.f_name}>
-              <h1>{person.f_name}</h1>
-            </div>
-          ))} */}
-
-          <SelectedItems
+          {/* <SelectedItems
             selectedItems={selectedItems}
             totalPrice={totalPrice}
             updateQuantity={updateQuantity}
@@ -131,14 +124,45 @@ export default function Main() {
             canScrollLeft={canScrollLeft}
             canScrollRight={canScrollRight}
             containerRef={selectedItemsContainerRef}
-          />
-          <ItemSelection
+          /> */}
+          {/* <ItemSelection
             Items={Items}
             toggleItem={toggleItem}
             selectedItems={selectedItems}
-          />
+          /> */}
+          <ProductDisplay Items={ProductArt} />
         </div>
       </div>
     </div>
   );
+}
+
+{
+  /* <div className="flex flex-col space-y-2">
+<div className="w-[21rem] h-[2px] bg-[#0308ff] ml-[-20rem]"></div>
+<div className="w-[20.5rem] h-[2px] bg-[#0308ff] ml-[-20rem]"></div>
+<div className="w-[20rem] h-[2px] bg-[#0308ff] ml-[-20rem]"></div>
+<div className="w-[19.5rem] h-[2px] bg-[#0308ff] ml-[-20rem]"></div>
+</div>
+
+{/* Right Side Lines (Tilting Opposite Direction) */
+}
+{
+  /* <div className="flex flex-col space-y-2 items-end">
+<div className="w-[19.5rem] h-[2px] bg-[#0308ff] mr-[-20rem]"></div>
+<div className="w-[20rem] h-[2px] bg-[#0308ff] mr-[-20rem]"></div>
+<div className="w-[20.5rem] h-[2px] bg-[#0308ff] mr-[-20rem]"></div>
+<div className="w-[21rem] h-[2px] bg-[#0308ff] mr-[-20rem]"></div>
+</div>
+</div> 
+
+<div className="flex  justify-center mb-4 mx-auto text-center p-2 mt-[-10px] border max-w-[800px] border-slate-200 md:text-[18px] text-[10px] shadow-[2px_2px_0px_gray]">
+<div className="p-2 m-[-8px] border border-slate-200">
+  To start learning embedded coding you could start with a Raspberry
+  Pi 4 and a matching USB-C power cable for a simple kit to test with
+  the built-in light. To add an LCD or other components, you'll need a
+  breadboard and a jumper wires kit (from the cable section, 40+
+  pieces, M-M, M-F, F-F) to connect everything properly.
+</div>
+</div> */
 }

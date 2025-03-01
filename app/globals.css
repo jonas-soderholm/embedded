@@ -5,15 +5,15 @@
   --font-mono: var(--font-geist-mono);
 }
 
-body,
+/* body,
 code,
 pre {
   font-family: "Ubuntu Mono", "DejaVu Sans Mono", "Liberation Mono", monospace !important;
-}
+} */
 
-/* @font-face {
+@font-face {
   font-family: "Px437 IBM VGA8";
-  src: url("/fonts/Ac437_ToshibaSat_8x14.ttf") format("truetype");
+  src: url("/fonts/AcPlus_IBM_VGA_9x14.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -22,7 +22,7 @@ body,
 code,
 pre {
   font-family: "Px437 IBM VGA8", monospace !important;
-} */
+}
 
 :root {
   --background: #ffffff;
@@ -31,7 +31,7 @@ pre {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
@@ -47,14 +47,11 @@ body {
 }
 
 .retro-shadow {
-  position: relative;
-  color: #00ff00;
+  color: #ffffff;
 
   /* Pixel-dotted shadow effect */
-  box-shadow: 8px 8px 0px #000000;
-
-  /* Makes sure the dots stay pixelated */
-  image-rendering: pixelated;
+  box-shadow: 12px 8px 0px #000000;
+  z-index: -10;
 }
 
 .border-color {
@@ -82,7 +79,7 @@ body {
 }
 
 .header-color {
-  background-color: #9c0505;
+  background-color: #c90000;
 }
 
 /* hover */
