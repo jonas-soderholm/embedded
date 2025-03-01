@@ -54,7 +54,7 @@ const AsciiArt = ({ speed = 0.5 }) => {
         <div className="flex !text-slate-200 justify-center md:mt-[-5px] mt-[7px] text-center md:text-[17px] text-[11px]">
           Click on product to add, checkout the bundle to Amazon.
         </div>
-        <div className="flex justify-center mb-4 mx-auto text-center p-2 mt-6 border max-w-[800px] border-slate-200 md:text-[15px] text-[10px] shadow-[2px_2px_0px_gray]">
+        <div className="flex justify-center mb-4 text-center p-2 mt-6 border max-w-[800px] border-slate-200 md:text-[15px] text-[10px] mx-[17px] md:mx-auto ">
           <div className="p-2 m-[-8px] border border-slate-200">
             To start learning embedded coding you could start with a Raspberry
             Pi 4 and a matching USB-C power cable for a simple kit to test with

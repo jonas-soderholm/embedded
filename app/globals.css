@@ -63,7 +63,7 @@ body {
 }
 
 .border-color-items {
-  border-color: #ffffff;
+  border-color: #a36e0a;
   border-width: 1px;
 }
 
@@ -89,4 +89,39 @@ body {
 /* hover */
 .bg-button:hover {
   background-color: #1a140d;
+}
+
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 25px; /* Adjust scrollbar thickness */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: black; /* Match button background */
+  border: 2px solid orange; /* Match button border */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: orange; /* Scrollbar thumb color */
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #ff9800; /* Slightly brighter orange on hover */
+}
+
+/* ✅ Firefox Support */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: orange black;
 }
