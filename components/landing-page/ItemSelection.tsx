@@ -76,18 +76,18 @@ export default function ItemSelection({
                         : "border-slate-300 bg-slate-900"
                     }`}
                   >
-                    {/* ✅ Image on Left */}
+                    {/* Image on Left */}
                     <img
                       src={item.image}
                       alt={item.name}
                       className="h-20 w-20 object-contain mr-4"
                     />
 
-                    {/* ✅ Text Content on Right (Centered) */}
+                    {/* Text Content on Right (Centered) */}
                     <div className="flex flex-col items-start justify-center">
                       <p className="text-xs leading-tight">{item.name}</p>
 
-                      {/* ✅ Show Code Type if Microcontroller */}
+                      {/* Show Code Type if Microcontroller */}
                       {item.codeType && (
                         <p className="text-xs text-gray-400">
                           <span className="font-bold">Code:</span>{" "}
@@ -95,7 +95,7 @@ export default function ItemSelection({
                         </p>
                       )}
 
-                      {/* ✅ Display Price */}
+                      {/* Display Price */}
                       <p className="text-xs text-gray-400">
                         <span className="font-bold">Price:</span>{" "}
                         {item.price !== null

@@ -55,20 +55,20 @@ body {
 }
 
 .retro-shadow-items {
-  box-shadow: 6px 6px 0px #6e6e6e;
+  box-shadow: 6px 6px 0px #011bb1;
 }
 
 .border-color {
-  border-color: #a36e0a;
+  border-color: #d8900c;
 }
 
 .border-color-items {
-  border-color: #a36e0a;
+  border-color: #d8900c;
   border-width: 1px;
 }
 
 .bg-color {
-  background-color: #a36e0a;
+  background-color: #d8900c;
 }
 
 .bg-color-items {
@@ -107,21 +107,26 @@ body {
 
 .custom-scrollbar::-webkit-scrollbar-track {
   background: black; /* Match button background */
-  border: 2px solid orange; /* Match button border */
+  border: 2px solid #d8900c; /* Match button border */
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: orange; /* Scrollbar thumb color */
+  background: #d8900c; /* Scrollbar thumb color */
   border-radius: 5px;
   border: 2px solid black;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #ff9800; /* Slightly brighter orange on hover */
+  background: #d8900c; /* Slightly brighter orange on hover */
 }
 
 /* ✅ Firefox Support */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: orange black;
+  scrollbar-color: #d8900c black;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.7s ease-out;
+  opacity: 1;
 }

@@ -5,9 +5,6 @@ import AsciiArt from "../ASCII/Ascii";
 import { Items } from "../items/Items";
 import SelectedItems from "./SelectedItems";
 import ItemSelection from "./ItemSelection";
-import axios from "axios";
-import { getUser } from "@/actions";
-import { time } from "console";
 
 export default function Main() {
   const [selectedItems, setSelectedItems] = useState<
@@ -106,8 +103,6 @@ export default function Main() {
     fetchPrices();
   }, []);
 
-  // const lol = await getUser();
-
   return (
     <div className="p-2  text-slate-200 font-mono text-xs border border-gray-600">
       <div className="p-[2px]  text-slate-200 font-mono text-xs border border-gray-600">
@@ -115,12 +110,6 @@ export default function Main() {
           <div className="flex justify-center">
             <AsciiArt />
           </div>
-
-          {/* {lol.map((person) => (
-            <div key={person.f_name}>
-              <h1>{person.f_name}</h1>
-            </div>
-          ))} */}
 
           <SelectedItems
             selectedItems={selectedItems}

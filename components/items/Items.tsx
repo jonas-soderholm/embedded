@@ -2,28 +2,28 @@ export const Items = {
   Microcontrollers: [
     {
       name: "Raspberry Pi Pico",
-      image: "/images/breadboards/BPS-BB830_Top.jpg",
+      image: "/images/microcontrollers/rasperry.png",
       affiliateLink: "https://www.amazon.com/dp/B09G1N3JLP?tag=yourAffiliateID",
       price: null,
       codeType: "C, C++, MicroPython (RP2040 SDK, Arduino IDE)",
     },
     {
-      name: "Arduino Uno",
-      image: "/images/breadboards/BPS-BB830_Top.jpg",
+      name: "Arduino Uno R3",
+      image: "/images/microcontrollers/arduino.png",
       affiliateLink: "https://www.amazon.com/dp/B07XG2D7F3?tag=yourAffiliateID",
       price: null,
       codeType: "C, C++ (Arduino IDE)",
     },
     {
-      name: "ESP32 (WiFi + Bluetooth)",
-      image: "/images/breadboards/BPS-BB830_Top.jpg",
+      name: "ESP32 DevKit V1 (WiFi + Bluetooth)",
+      image: "/images/microcontrollers/esp32devkit.png",
       affiliateLink: "https://www.amazon.com/dp/B08HQ4JCNM?tag=yourAffiliateID",
       price: null,
       codeType: "C, C++ (Arduino IDE, ESP-IDF), MicroPython",
     },
     {
-      name: "STM32 (High-Performance)",
-      image: "/images/breadboards/BPS-BB830_Top.jpg",
+      name: "STM32 Blue Pill (High-Performance)",
+      image: "/images/microcontrollers/stm32bluepill.png",
       affiliateLink: "https://www.amazon.com/dp/B08N5M6YPC?tag=yourAffiliateID",
       price: null,
       codeType: "C, C++ (STM32CubeIDE, Keil, PlatformIO)",
@@ -31,9 +31,16 @@ export const Items = {
   ],
   Breadboards: [
     {
-      name: "BusBoard BB830 (Solderless Breadboard)",
+      name: "BusBoard BB830 (Solderless) - Fits All Listed Inputs with Careful Placement",
       image: "/images/breadboards/BPS-BB830_Top.jpg",
       affiliateLink: "https://www.amazon.com/dp/B01HRR7EBG?tag=yourAffiliateID",
+      price: null,
+    },
+
+    {
+      name: "Mini Breadboard (3-Pack) For Extra Space",
+      image: "/images/breadboards/BPS-BB830_Top.jpg",
+      affiliateLink: "https://www.amazon.com/dp/B08D9Z5L7L?tag=yourAffiliateID",
       price: null,
     },
   ],
@@ -98,19 +105,19 @@ export const Items = {
   "Cables & Wires": [
     {
       name: "USB-C Cable (For Arduino Uno R4)",
-      image: "/images/cables/usb-c.jpg",
+      image: "/images/breadboards/BPS-BB830_Top.jpg",
       affiliateLink: "https://www.amazon.com/dp/B08HQ4JCNM?tag=yourAffiliateID",
       price: null,
     },
     {
-      name: "Micro USB Cable (For Raspberry Pi Pico, ESP32 & STM32 Blue Pill)",
-      image: "/images/cables/micro-usb.jpg",
+      name: "Micro USB Cable (For Raspberry Pi Pico, ESP32 & STM32)",
+      image: "/images/breadboards/BPS-BB830_Top.jpg",
       affiliateLink: "https://www.amazon.com/dp/B07PF4G3ZN?tag=yourAffiliateID",
       price: null,
     },
     {
       name: "Jumper Wires Kit (20 pcs, M-M, M-F, F-F)",
-      image: "/images/cables/jumper-wires.jpg",
+      image: "/images/breadboards/BPS-BB830_Top.jpg",
       affiliateLink: "https://www.amazon.com/dp/B07BTB3N3J?tag=yourAffiliateID",
       price: null,
     },
