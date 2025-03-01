@@ -69,10 +69,10 @@ export default function ItemSelection({
                   <div
                     key={item.name}
                     onClick={() => toggleItem(item)}
-                    className={`cursor-pointer p-4 text-color border text-left w-[350px] h-[170px] min-w-[350px] flex flex-row items-center justify-center retro-shadow-items hover:bg-slate-900 transition-colors ${
+                    className={`cursor-pointer p-4 text-color border text-left w-[350px] h-[170px] min-w-[350px] flex flex-row items-center justify-center retro-shadow-items hover:bg-slate-700 transition-colors ${
                       selectedItems.some((i) => i.name === item.name)
-                        ? "border-slate-500 bg-slate-900 bg-opacity-80"
-                        : "border-slate-300 bg-slate-700"
+                        ? "border-slate-500 bg-slate-700 bg-opacity-80"
+                        : "border-slate-300 bg-slate-900"
                     }`}
                   >
                     {/* ✅ Image on Left */}
