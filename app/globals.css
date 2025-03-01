@@ -5,15 +5,15 @@
   --font-mono: var(--font-geist-mono);
 }
 
-body,
+/* body,
 code,
 pre {
   font-family: "Ubuntu Mono", "DejaVu Sans Mono", "Liberation Mono", monospace !important;
-}
+} */
 
-/* @font-face {
+@font-face {
   font-family: "Px437 IBM VGA8";
-  src: url("/fonts/Ac437_ToshibaSat_8x14.ttf") format("truetype");
+  src: url("/fonts/Ac437_IBM_EGA_9x8.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -22,16 +22,15 @@ body,
 code,
 pre {
   font-family: "Px437 IBM VGA8", monospace !important;
-} */
-
-:root {
+}
+*/ :root {
   --background: #ffffff;
   --foreground: #cf1717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
@@ -51,7 +50,7 @@ body {
   color: #00ff00;
 
   /* Pixel-dotted shadow effect */
-  box-shadow: 8px 8px 0px #000000;
+  box-shadow: 11px 11px 0px #222222;
 
   /* Makes sure the dots stay pixelated */
   image-rendering: pixelated;

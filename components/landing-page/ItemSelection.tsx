@@ -30,7 +30,7 @@ export default function ItemSelection({
               [{category.toUpperCase()}]
             </div>
           </div>
-          <div className="flex gap-2 overflow-x-auto flex-nowrap p-6 border-color-items pt-8 scrollbar-hide ">
+          <div className="flex gap-6 overflow-x-auto flex-nowrap p-6 border-color-items pt-8 scrollbar-hide ">
             {categoryItems.map((item) => (
               <div
                 key={item.name}

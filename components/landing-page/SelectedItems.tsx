@@ -32,7 +32,7 @@ export default function SelectedItems({
   containerRef,
 }: SelectedItemsProps) {
   return (
-    <div className=" sticky top-0 bg-[#00000091] z-50">
+    <div className=" sticky top-0 bg-[#000000e1] z-50">
       <h2 className="text-sm bg-color pl-2">[SELECTED ITEMS]</h2>
 
       <div className="relative w-full">
@@ -62,33 +62,37 @@ export default function SelectedItems({
             selectedItems.map((item) => (
               <div
                 key={item.name}
-                className="bg-green-900 p-2 text-center flex flex-col items-center h-[150px] w-[250px] max-w-[250px] shrink-0"
+                className="border-color-items p-2 text-center flex flex-col items-center h-[150px] w-[250px] max-w-[250px] shrink-0 justify-between"
               >
                 {/* <img src={item.image} alt={item.name} className="h-10" /> */}
-                <p className="text-xs leading-tight">{item.name}</p>
+                <p className="text-xs leading-tight text-color">{item.name}</p>
                 {/* Custom Quantity Control */}
-                <div className="flex items-center mt-1">
+                <div className="flex items-center mt-1 ">
                   <button
                     onClick={() =>
                       item.quantity === 1
                         ? updateQuantity(item.name, 0)
                         : updateQuantity(item.name, item.quantity - 1)
                     }
-                    className="px-2 bg-green-500 text-black text-xs hover:bg-green-600 transition"
+                    className="px-2 bg-color text-black text-xs transition"
                   >
                     -
                   </button>
-                  <span className="w-10 text-center bg-black text-green-400 border-t border-b border-green-500 text-xs">
-                    {item.quantity}
-                  </span>
-                  <button
-                    onClick={() => updateQuantity(item.name, item.quantity + 1)}
-                    className="px-2  bg-green-500 text-black text-xs hover:bg-green-600 transition"
-                  >
-                    +
-                  </button>
+                  <div className="flex flex-row">
+                    <span className="w-10 text-center bg-black text-slate-200 border-t border-b border-color text-xs">
+                      {item.quantity}
+                    </span>
+                    <button
+                      onClick={() =>
+                        updateQuantity(item.name, item.quantity + 1)
+                      }
+                      className="px-2 bg-color text-black text-xs transition"
+                    >
+                      +
+                    </button>
+                  </div>
                 </div>
-                <p className="text-xs mt-1">
+                <p className="text-xs mt-1 text-color">
                   $
                   {item.price
                     ? (item.price * item.quantity).toFixed(2)
@@ -104,7 +108,7 @@ export default function SelectedItems({
           <button
             onClick={scrollRight}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 p-2
-             text-green-400 hover:bg-opacity-90 z-10 border border-green-600 "
+             text-color hover:bg-opacity-90 z-10 border border-color "
           >
             {">"}
           </button>
