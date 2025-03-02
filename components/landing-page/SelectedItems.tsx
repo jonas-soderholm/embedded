@@ -59,10 +59,15 @@ export default function SelectedItems({
             selectedItems.map((item) => (
               <div
                 key={item.name}
-                className="border-color-items p-2 text-center flex flex-col items-center h-[150px] w-[250px] max-w-[250px] shrink-0 justify-between"
+                className="border-color-items p-2 text-center flex flex-col items-center md:h-[150px] h-[100px] w-[250px] max-w-[250px] shrink-0 justify-between"
               >
                 {/* Item Name */}
-                <p className="text-xs leading-tight text-color">{item.name}</p>
+                <p
+                  className="text-xs leading-tight text-color truncate w-full"
+                  title={item.name}
+                >
+                  {item.name}
+                </p>
 
                 {/* Quantity Controls */}
                 <div className="flex items-center mt-1">
@@ -87,21 +92,21 @@ export default function SelectedItems({
                   </button>
                 </div>
 
-                {/* ✅ Price Calculation */}
-                <p className="text-xs mt-1 text-color">
-                  $
-                  {item.price
-                    ? (item.price * item.quantity).toFixed(2)
-                    : "Loading..."}
-                </p>
-
-                {/* ✅ Wires Needed Per Item */}
+                {/* Wires Needed Per Item */}
                 {item.wiresNeeded !== undefined && (
                   <p className="text-xs text-gray-400">
                     <span className="font-bold">Wires Needed:</span>{" "}
                     {item.wiresNeeded * item.quantity}
                   </p>
                 )}
+
+                {/* Price Calculation */}
+                <p className="text-xs mt-1 text-color">
+                  $
+                  {item.price
+                    ? (item.price * item.quantity).toFixed(2)
+                    : "Loading..."}
+                </p>
               </div>
             ))
           )}
