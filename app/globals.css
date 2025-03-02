@@ -86,9 +86,13 @@ body {
   background-color: #9c0505;
 }
 
-/* hover */
+.bg-button {
+  background-color: #000000;
+}
+
 .bg-button:hover {
   background-color: #1a140d;
+  @apply transition-colors;
 }
 
 /* Hide scrollbar but allow scrolling */
@@ -120,7 +124,7 @@ body {
   background: #d8900c; /* Slightly brighter orange on hover */
 }
 
-/* ✅ Firefox Support */
+/* Firefox Support */
 .custom-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: #d8900c black;

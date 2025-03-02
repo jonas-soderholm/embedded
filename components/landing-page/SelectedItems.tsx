@@ -25,7 +25,7 @@ export default function SelectedItems({
 }: SelectedItemsProps) {
   const { containerRef, scrollLeft, scrollRight } = useSelectedItemsScroll();
 
-  // ✅ Calculate total number of wires needed
+  // Calculate total number of wires needed
   const totalWiresNeeded = selectedItems.reduce((total, item) => {
     return total + (item.wiresNeeded ? item.wiresNeeded * item.quantity : 0);
   }, 0);
@@ -38,7 +38,7 @@ export default function SelectedItems({
         {/* Left Scroll Button */}
         <button
           onClick={scrollLeft}
-          className="absolute hover:cursor-pointer left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 p-2 text-color hover:bg-opacity-90 z-10 border border-color"
+          className="absolute hover:cursor-pointer left-0 top-1/2 transform -translate-y-1/2 bg-button p-2 text-color z-10 border border-color"
         >
           {"<"}
         </button>
@@ -115,7 +115,7 @@ export default function SelectedItems({
         {/* Right Scroll Button */}
         <button
           onClick={scrollRight}
-          className="absolute hover:cursor-pointer right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 p-2 text-color hover:bg-opacity-90 z-10 border border-color"
+          className="absolute hover:cursor-pointer right-0 top-1/2 bg-button transform -translate-y-1/2 p-2 text-color hover:bg-opacity-90 z-10 border border-color"
         >
           {">"}
         </button>
@@ -123,7 +123,8 @@ export default function SelectedItems({
 
       {/* Total Price & Total Wires Needed */}
       <p className="mt-2 text-xs  mb-3.5">
-        Total: ${totalPrice.toFixed(2)} | Wires Needed: {totalWiresNeeded}
+        Total: ${totalPrice.toFixed(2)} | Jumper Wires Needed:{" "}
+        {totalWiresNeeded}
       </p>
 
       {/* Amazon Affiliate Link */}

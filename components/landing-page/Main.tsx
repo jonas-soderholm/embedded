@@ -115,11 +115,6 @@ export default function Main() {
             selectedItems={selectedItems}
             totalPrice={totalPrice}
             updateQuantity={updateQuantity}
-            scrollLeft={scrollLeft}
-            scrollRight={scrollRight}
-            canScrollLeft={canScrollLeft}
-            canScrollRight={canScrollRight}
-            containerRef={selectedItemsContainerRef}
           />
           <ItemSelection
             Items={Items}

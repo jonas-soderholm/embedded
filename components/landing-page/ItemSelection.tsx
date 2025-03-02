@@ -55,7 +55,7 @@ export default function ItemSelection({
               {/* Left Scroll Button */}
               <button
                 onClick={scrollLeft}
-                className="absolute hover:cursor-pointer left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 p-2 text-color hover:bg-opacity-90 z-40 border border-color"
+                className="absolute hover:cursor-pointer left-0 top-1/2 transform -translate-y-1/2 bg-button p-2 text-color z-40 border border-color"
               >
                 {"<"}
               </button>
@@ -119,7 +119,7 @@ export default function ItemSelection({
               {/* Right Scroll Button */}
               <button
                 onClick={scrollRight}
-                className="absolute hover:cursor-pointer right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 p-2 text-color hover:bg-opacity-90 z-40 border border-color"
+                className="absolute hover:cursor-pointer right-0 top-1/2 transform -translate-y-1/2 bg-button p-2 text-color z-40 border border-color"
               >
                 {">"}
               </button>
