@@ -67,14 +67,11 @@ const AsciiArt = ({ speed = 0.5 }) => {
       </div>
       <div className="flex justify-center border border-slate-200 max-w-[800px] p-[2px] text-center mt-4 sm:text-[15px] text-[10px] mx-4 mb-4">
         <div className="p-2 border border-slate-200">
-          <p>
-            Microcontrollers power everyday gadgets like headphones and remotes.
-            All you need to start embedded coding is a microcontroller and USB.
-            Each microcontroller includes a built-in LED for quick coding
-            without extra setup. Add an LCD, sensors, motors, and other
-            components with a breadboard and Jumper Wires Kit. All listed
-            microcontrollers work on Windows, macOS, and Linux.
-          </p>
+          {`Microcontrollers power everyday gadgets like headphones and remotes.
+          You could start embedded coding with just a microcontroller and USB
+          power. All listed microcontrollers have a built-in light for quick
+          code testing. If you add an LCD or other extras, add a breadboard and
+          jumper wires. Have fun!`}
         </div>
       </div>
     </div>
@@ -82,3 +79,22 @@ const AsciiArt = ({ speed = 0.5 }) => {
 };
 
 export default AsciiArt;
+
+{
+  /* <p>
+Microcontrollers power everyday gadgets like headphones and remotes.
+All you need to start embedded coding is a microcontroller and a
+USB. Each microcontroller includes a built-in LED for quick coding
+without extra setup. Add an LCD, sensors, motors, and other
+components with a breadboard and Jumper Wires Kit. All listed
+microcontrollers work on Windows, macOS, and Linux.
+</p> */
+}
+
+{
+  /* <div className="p-2 border border-slate-200">
+Start embedded coding with a Raspberry Pi 4 + USB-C power. Test with
+its built-in light. For LCD or extras, use a breadboard + jumper wires
+(M-M, M-F, F-F).
+</div> */
+}
