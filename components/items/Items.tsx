@@ -53,18 +53,18 @@ export const Items = {
       wiresNeeded: 12, // 12 wires if used without I2C adapter, 4 with I2C adapter
     },
     {
-      name: "4x4 Keypad (User Input)",
-      image: "/images/breadboards/BPS-BB830_Top.jpg",
-      affiliateLink: "https://www.amazon.com/dp/B08GP6TT9S?tag=yourAffiliateID",
-      price: null,
-      wiresNeeded: 8,
-    },
-    {
       name: "I2C Adapter (Simplifies LCD Wiring)",
       image: "/images/breadboards/BPS-BB830_Top.jpg",
       affiliateLink: "https://www.amazon.com/dp/B08GP7TT1Y?tag=yourAffiliateID",
       price: null,
       wiresNeeded: 4,
+    },
+    {
+      name: "4x4 Keypad (User Input)",
+      image: "/images/breadboards/BPS-BB830_Top.jpg",
+      affiliateLink: "https://www.amazon.com/dp/B08GP6TT9S?tag=yourAffiliateID",
+      price: null,
+      wiresNeeded: 8,
     },
     {
       name: "Rotary Encoder (Turn Knob to Change Values)",

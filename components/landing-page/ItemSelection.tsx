@@ -55,7 +55,7 @@ export default function ItemSelection({
               {/* Left Scroll Button */}
               <button
                 onClick={scrollLeft}
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 p-2 text-color hover:bg-opacity-90 z-40 border border-color"
+                className="absolute hover:cursor-pointer left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 p-2 text-color hover:bg-opacity-90 z-40 border border-color"
               >
                 {"<"}
               </button>
@@ -95,6 +95,15 @@ export default function ItemSelection({
                         </p>
                       )}
 
+                      {/* Display Required Wires (if applicable) */}
+                      {item.wiresNeeded !== undefined && (
+                        <p className="text-xs flex-row text-gray-400">
+                          <span className="font-bold wire-color">
+                            Wires Needed: {item.wiresNeeded}
+                          </span>
+                        </p>
+                      )}
+
                       {/* Display Price */}
                       <p className="text-xs text-gray-400">
                         <span className="font-bold">Price:</span>{" "}
@@ -102,14 +111,6 @@ export default function ItemSelection({
                           ? `$${item.price.toFixed(2)}`
                           : "Not Available"}
                       </p>
-
-                      {/* ✅ Display Required Wires (if applicable) */}
-                      {item.wiresNeeded !== undefined && (
-                        <p className="text-xs text-gray-400">
-                          <span className="font-bold">Wires Needed:</span>{" "}
-                          {item.wiresNeeded}
-                        </p>
-                      )}
                     </div>
                   </div>
                 ))}
@@ -118,7 +119,7 @@ export default function ItemSelection({
               {/* Right Scroll Button */}
               <button
                 onClick={scrollRight}
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 p-2 text-color hover:bg-opacity-90 z-40 border border-color"
+                className="absolute hover:cursor-pointer right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 p-2 text-color hover:bg-opacity-90 z-40 border border-color"
               >
                 {">"}
               </button>
