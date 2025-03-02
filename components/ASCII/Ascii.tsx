@@ -67,12 +67,14 @@ const AsciiArt = ({ speed = 0.5 }) => {
       </div>
       <div className="flex justify-center border border-slate-200 max-w-[800px] p-[2px] text-center mt-4 sm:text-[15px] text-[10px] mx-4 mb-4">
         <div className="p-2 border border-slate-200">
-          Start embedded coding with a microcontroller and USB power. All
-          microcontrollers work on Windows, macOS, and Linux. All listed
-          microcontrollers (except Raspberry Pi 4) include a built-in LED for
-          quick testing. To connect an LCD or other components, add a
-          prototyping board and a Jumper Wires Kit (includes 20 wires: 50 M-M,
-          50 M-F, 40 F-F).
+          <p>
+            Microcontrollers power everyday gadgets like headphones and remotes.
+            All you need to start embedded coding is a microcontroller and USB.
+            Each microcontroller includes a built-in LED for quick coding
+            without extra setup. Add an LCD, sensors, motors, and other
+            components with a breadboard and Jumper Wires Kit. All listed
+            microcontrollers work on Windows, macOS, and Linux.
+          </p>
         </div>
       </div>
     </div>
