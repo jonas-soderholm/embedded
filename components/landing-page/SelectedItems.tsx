@@ -59,11 +59,11 @@ export default function SelectedItems({
             selectedItems.map((item) => (
               <div
                 key={item.name}
-                className="border-color-items p-2 text-center flex flex-col items-center md:h-[100px] h-[80px] md:w-[250px] md:max-w-[250px]  w-[150px] max-w-[250px] shrink-0 justify-between"
+                className="border-color-items p-2 text-center flex flex-col items-center md:h-[200px] h-[120px] md:w-[250px] md:max-w-[250px] w-[150px] max-w-[250px] shrink-0 justify-between"
               >
                 {/* Item Name */}
                 <p
-                  className=" leading-tight text-color truncate w-full"
+                  className="leading-tight text-color truncate w-full"
                   title={item.name}
                 >
                   {item.name}
@@ -81,7 +81,7 @@ export default function SelectedItems({
                   >
                     -
                   </button>
-                  <span className="w-10 text-center bg-black text-slate-200 border-t border-b border-color ">
+                  <span className="w-10 text-center bg-black text-slate-200 border-t border-b border-color">
                     {item.quantity}
                   </span>
                   <button
@@ -92,21 +92,23 @@ export default function SelectedItems({
                   </button>
                 </div>
 
-                {/*  Wires Needed Per Item */}
-                {/* {item.wiresNeeded !== undefined && (
-                  <p className="text-xs text-gray-400">
-                    <span className="font-bold">Wires Needed:</span>{" "}
-                    {item.wiresNeeded * item.quantity}
-                  </p>
-                )} */}
-
-                {/*  Price Calculation */}
+                {/* Price Calculation */}
                 <p className="mt-1 text-color">
                   $
                   {item.price
                     ? (item.price * item.quantity).toFixed(2)
                     : "Loading..."}
                 </p>
+
+                {/* Amazon Link Button Under Each Item */}
+                <a
+                  href={item.affiliateLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 px-3 py-1 border border-color bg-button text-color font-bold bg-black"
+                >
+                  Amazon Link
+                </a>
               </div>
             ))
           )}
@@ -128,14 +130,14 @@ export default function SelectedItems({
       </p>
 
       {/* Amazon Affiliate Link */}
-      <a
+      {/* <a
         href="https://www.amazon.com/gp/cart/view.html?tag=yourAffiliateID"
         target="_blank"
         rel="noopener noreferrer"
         className="px-3 py-2 border border-color bg-button text-color font-bold transition shadow-[2px_2px_0px_white] bg-black"
       >
         Buy Bundle at Amazon
-      </a>
+      </a> */}
     </div>
   );
 }

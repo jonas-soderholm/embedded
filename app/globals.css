@@ -107,7 +107,7 @@ body {
 /* Scroll */
 .custom-scrollbar {
   overflow-y: hidden !important;
-  overflow-x: scroll !important;
+  /* overflow-x: hidden !important; */
   scrollbar-width: auto !important;
   scrollbar-color: #d8900c black;
 }

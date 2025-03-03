@@ -3,7 +3,7 @@ export const Items = {
     {
       name: "Raspberry Pi Pico",
       image: "/images/microcontrollers/rasperry.png",
-      affiliateLink: "https://www.amazon.com/dp/B09G1N3JLP?tag=yourAffiliateID",
+      affiliateLink: "https://amzn.to/43kz9Wz",
       price: null,
       codeType: "C, C++, MicroPython (RP2040 SDK, Arduino IDE)",
     },
@@ -24,7 +24,7 @@ export const Items = {
     {
       name: "STM32 Blue Pill (High-Performance)",
       image: "/images/microcontrollers/stm32bluepill.png",
-      affiliateLink: "https://www.amazon.com/dp/B08N5M6YPC?tag=yourAffiliateID",
+      affiliateLink: "https://amzn.to/3DoCAB2",
       price: null,
       codeType: "C, C++ (STM32CubeIDE, Keil, PlatformIO)",
     },
