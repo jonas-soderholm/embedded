@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef, use } from "react";
+import { useEffect, useState } from "react";
 import AsciiArt from "../ASCII/Ascii";
 import { Items } from "../items/Items";
 import SelectedItems from "./SelectedItems";
