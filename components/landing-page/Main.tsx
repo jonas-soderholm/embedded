@@ -79,7 +79,7 @@ export default function Main() {
                 category,
                 categoryItems.map((item) => ({
                   ...item,
-                  quantity: 1, // ✅ Ensures every item has a quantity before passing
+                  quantity: 1,
                 })),
               ])
             )}

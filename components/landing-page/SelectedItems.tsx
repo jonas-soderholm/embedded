@@ -31,14 +31,14 @@ export default function SelectedItems({
   }, 0);
 
   return (
-    <div className="sticky top-0 bg-[#000000e1] z-50 mb-8">
-      <h2 className="text-sm bg-color pl-2 pt-[4px]">[SELECTED ITEMS]</h2>
+    <div className="sticky top-0 bg-[#000000e1] z-50 mb-8 md:text-sm text-[10px]">
+      <h2 className=" bg-color pl-2 pt-[4px]">[SELECTED ITEMS]</h2>
 
       <div className="relative w-full">
         {/* Left Scroll Button */}
         <button
           onClick={scrollLeft}
-          className="absolute hover:cursor-pointer left-0 top-1/2 transform -translate-y-1/2 bg-button p-2 text-color z-10 border border-color"
+          className="absolute hidden sm:block hover:cursor-pointer left-0 top-1/2 transform -translate-y-1/2 bg-button p-2 text-color z-10 border border-color"
         >
           {"<"}
         </button>
@@ -46,7 +46,7 @@ export default function SelectedItems({
         {/* Scrollable Items Container */}
         <div
           ref={containerRef}
-          className="flex gap-2 overflow-x-auto flex-nowrap border p-4 border-color custom-scrollbar scroll-smooth"
+          className="flex gap-2 overflow-x-auto flex-nowrap border md:p-4 p-2 border-color custom-scrollbar scroll-smooth"
           style={{
             overflowX: "auto",
             scrollbarWidth: "thin",
@@ -54,16 +54,16 @@ export default function SelectedItems({
           }}
         >
           {selectedItems.length === 0 ? (
-            <p className="text-color text-xs ml-4">Click on items to add</p>
+            <p className="text-color md:ml-4">Click on items to add</p>
           ) : (
             selectedItems.map((item) => (
               <div
                 key={item.name}
-                className="border-color-items p-2 text-center flex flex-col items-center md:h-[150px] h-[100px] w-[250px] max-w-[250px] shrink-0 justify-between"
+                className="border-color-items p-2 text-center flex flex-col items-center md:h-[100px] h-[80px] md:w-[250px] md:max-w-[250px]  w-[150px] max-w-[250px] shrink-0 justify-between"
               >
                 {/* Item Name */}
                 <p
-                  className="text-xs leading-tight text-color truncate w-full"
+                  className=" leading-tight text-color truncate w-full"
                   title={item.name}
                 >
                   {item.name}
@@ -77,16 +77,16 @@ export default function SelectedItems({
                         ? updateQuantity(item.name, 0)
                         : updateQuantity(item.name, item.quantity - 1)
                     }
-                    className="px-2 bg-color text-black text-xs transition"
+                    className="px-2 bg-color text-black transition"
                   >
                     -
                   </button>
-                  <span className="w-10 text-center bg-black text-slate-200 border-t border-b border-color text-xs">
+                  <span className="w-10 text-center bg-black text-slate-200 border-t border-b border-color ">
                     {item.quantity}
                   </span>
                   <button
                     onClick={() => updateQuantity(item.name, item.quantity + 1)}
-                    className="px-2 bg-color text-black text-xs transition"
+                    className="px-2 bg-color text-black transition"
                   >
                     +
                   </button>
@@ -101,7 +101,7 @@ export default function SelectedItems({
                 )} */}
 
                 {/*  Price Calculation */}
-                <p className="text-xs mt-1 text-color">
+                <p className="mt-1 text-color">
                   $
                   {item.price
                     ? (item.price * item.quantity).toFixed(2)
@@ -115,14 +115,14 @@ export default function SelectedItems({
         {/* Right Scroll Button */}
         <button
           onClick={scrollRight}
-          className="absolute hover:cursor-pointer right-0 top-1/2 bg-button transform -translate-y-1/2 p-2 text-color hover:bg-opacity-90 z-10 border border-color"
+          className="absolute hidden sm:block hover:cursor-pointer right-0 top-1/2 bg-button transform -translate-y-1/2 p-2 text-color hover:bg-opacity-90 z-10 border border-color"
         >
           {">"}
         </button>
       </div>
 
       {/* Total Price & Total Wires Needed */}
-      <p className="mt-2 text-xs  mb-3.5">
+      <p className="mt-2 mb-3.5 text-">
         Total: ${totalPrice.toFixed(2)} | Jumper Wires Needed:{" "}
         {totalWiresNeeded}
       </p>
@@ -132,7 +132,7 @@ export default function SelectedItems({
         href="https://www.amazon.com/gp/cart/view.html?tag=yourAffiliateID"
         target="_blank"
         rel="noopener noreferrer"
-        className="px-3 py-2 border border-color bg-button text-color font-bold text-xs transition shadow-[2px_2px_0px_white] bg-black"
+        className="px-3 py-2 border border-color bg-button text-color font-bold transition shadow-[2px_2px_0px_white] bg-black"
       >
         Buy Bundle at Amazon
       </a>

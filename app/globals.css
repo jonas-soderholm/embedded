@@ -95,41 +95,6 @@ body {
   @apply transition-colors;
 }
 
-/* Hide scrollbar but allow scrolling */
-.scrollbar-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-.scrollbar-hide::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
-}
-
-.custom-scrollbar::-webkit-scrollbar {
-  height: 25px; /* Adjust scrollbar thickness */
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: black; /* Match button background */
-  border: 2px solid #d8900c; /* Match button border */
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #d8900c; /* Scrollbar thumb color */
-  border-radius: 5px;
-  border: 2px solid black;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #d8900c; /* Slightly brighter orange on hover */
-}
-
-/* Firefox Support */
-.custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: #d8900c black;
-}
-
 .animate-fade-in {
   animation: fade-in 0.7s ease-out;
   opacity: 1;
@@ -137,4 +102,32 @@ body {
 
 .wire-color {
   color: #07c710;
+}
+
+/* Scroll */
+.custom-scrollbar {
+  overflow-y: hidden !important;
+  overflow-x: scroll !important;
+  scrollbar-width: auto !important;
+  scrollbar-color: #d8900c black;
+}
+
+/* Webkit Browsers */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px; /* Ensure it's visible */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: black;
+  border: 2px solid #d8900c;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #d8900c;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #d8900c;
 }
