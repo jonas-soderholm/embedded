@@ -23,11 +23,11 @@ export default function ItemSelection({
   toggleItem,
   selectedItems,
 }: ItemSelectionProps) {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
   return (
     <>
       {Object.entries(Items).map(([category, categoryItems]) => {
-        const containerRef = useRef<HTMLDivElement | null>(null);
-
         const scrollLeft = () => {
           if (containerRef.current) {
             containerRef.current.scrollBy({ left: -300, behavior: "smooth" });
