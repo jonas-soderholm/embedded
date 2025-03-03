@@ -6,19 +6,21 @@ import { Items } from "../items/Items";
 import SelectedItems from "./SelectedItems";
 import ItemSelection from "./ItemSelection";
 
+// Define the Item type
+interface Item {
+  name: string;
+  image: string;
+  affiliateLink: string;
+  quantity: number;
+  price: number | null;
+}
+
 export default function Main() {
-  const [selectedItems, setSelectedItems] = useState<
-    {
-      name: string;
-      image: string;
-      affiliateLink: string;
-      quantity: number;
-      price: number | null;
-    }[]
-  >([]);
+  const [selectedItems, setSelectedItems] = useState<Item[]>([]);
   const [totalPrice, setTotalPrice] = useState<number>(0);
 
-  const toggleItem = (item: any) => {
+  // Use the defined Item type instead of 'any'
+  const toggleItem = (item: Item) => {
     setSelectedItems((prev) => {
       const exists = prev.find((i) => i.name === item.name);
       return exists
@@ -47,19 +49,20 @@ export default function Main() {
 
   useEffect(() => {
     async function fetchPrices() {
-      const updatedItems = selectedItems.map((item) => ({
-        ...item,
-        price: Math.floor(Math.random() * 20) + 5,
-      }));
-      setSelectedItems(updatedItems);
+      setSelectedItems((prev) =>
+        prev.map((item) => ({
+          ...item,
+          price: Math.floor(Math.random() * 20) + 5,
+        }))
+      );
     }
     fetchPrices();
   }, []);
 
   return (
-    <div className="p-2  text-slate-200 font-mono text-xs border border-gray-600">
-      <div className="p-[2px]  text-slate-200 font-mono text-xs border border-gray-600">
-        <div className="px-4  text-slate-200 font-mono text-xs border border-gray-600">
+    <div className="p-2 text-slate-200 font-mono text-xs border border-gray-600">
+      <div className="p-[2px] text-slate-200 font-mono text-xs border border-gray-600">
+        <div className="px-4 text-slate-200 font-mono text-xs border border-gray-600">
           <div className="flex justify-center">
             <AsciiArt />
           </div>
