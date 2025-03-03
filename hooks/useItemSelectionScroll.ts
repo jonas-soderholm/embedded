@@ -16,7 +16,7 @@ export function useItemSelectionScroll() {
       setTimeout(() => {
         console.log(
           "Current scroll position AFTER:",
-          containerRef.current.scrollLeft
+          containerRef.current?.scrollLeft
         );
       }, 500); // ✅ Wait for scroll to apply
     } else {
@@ -35,7 +35,7 @@ export function useItemSelectionScroll() {
       setTimeout(() => {
         console.log(
           "Current scroll position AFTER:",
-          containerRef.current.scrollLeft
+          containerRef.current?.scrollLeft
         );
       }, 500); // ✅ Wait for scroll to apply
     } else {
