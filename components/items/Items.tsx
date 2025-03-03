@@ -104,7 +104,7 @@ export const Items = {
   ],
   "Cables & Wires": [
     {
-      name: "USB-C Cable (For Arduino Uno R4)",
+      name: "USB-C Cable (For Arduino Uno R3)",
       image: "/images/breadboards/BPS-BB830_Top.jpg",
       affiliateLink: "https://www.amazon.com/dp/B08HQ4JCNM?tag=yourAffiliateID",
       price: null,

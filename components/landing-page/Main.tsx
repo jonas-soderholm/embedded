@@ -18,53 +18,6 @@ export default function Main() {
   >([]);
   const [totalPrice, setTotalPrice] = useState<number>(0);
 
-  // Use one ref for the selected items container
-  const selectedItemsContainerRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
-
-  const scrollLeft = () => {
-    if (selectedItemsContainerRef.current) {
-      selectedItemsContainerRef.current.scrollBy({
-        left: -250,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const scrollRight = () => {
-    if (selectedItemsContainerRef.current) {
-      selectedItemsContainerRef.current.scrollBy({
-        left: 250,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const checkScroll = () => {
-    if (selectedItemsContainerRef.current) {
-      setCanScrollLeft(selectedItemsContainerRef.current.scrollLeft > 0);
-      setCanScrollRight(
-        selectedItemsContainerRef.current.scrollLeft +
-          selectedItemsContainerRef.current.clientWidth <
-          selectedItemsContainerRef.current.scrollWidth
-      );
-    }
-  };
-
-  useEffect(() => {
-    checkScroll();
-    const scrollContainer = selectedItemsContainerRef.current;
-    if (scrollContainer) {
-      scrollContainer.addEventListener("scroll", checkScroll);
-      window.addEventListener("resize", checkScroll);
-      return () => {
-        scrollContainer.removeEventListener("scroll", checkScroll);
-        window.removeEventListener("resize", checkScroll);
-      };
-    }
-  }, [selectedItems]);
-
   const toggleItem = (item: any) => {
     setSelectedItems((prev) => {
       const exists = prev.find((i) => i.name === item.name);

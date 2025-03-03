@@ -7,7 +7,7 @@ interface ItemType {
   image: string;
   affiliateLink: string;
   price: number | null;
-  wiresNeeded?: number; // ✅ Added to show required wires
+  wiresNeeded?: number;
   codeType?: string;
 }
 
