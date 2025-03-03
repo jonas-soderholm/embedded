@@ -229,7 +229,7 @@ export default function ItemSelection({
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="object-contain mr-4 md:h-[7rem] h-[5rem]"
+                    className="object-contain mr-4 md:h-[7rem] h-[4rem]"
                   />
 
                   <div className="flex flex-col items-start justify-center">
@@ -250,7 +250,7 @@ export default function ItemSelection({
                     )}
 
                     <p className="text-gray-400">
-                      <span className="font-bold">Price:</span>{" "}
+                      <span className="font-bold">Price: ~</span>{" "}
                       {item.price !== null
                         ? `$${item.price.toFixed(2)}`
                         : "Not Available"}

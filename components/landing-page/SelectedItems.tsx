@@ -94,7 +94,7 @@ export default function SelectedItems({
 
                 {/* Price Calculation */}
                 <p className="mt-1 text-color">
-                  $
+                  ~$
                   {item.price
                     ? (item.price * item.quantity).toFixed(2)
                     : "Loading..."}
