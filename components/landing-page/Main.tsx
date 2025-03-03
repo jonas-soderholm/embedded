@@ -13,19 +13,20 @@ interface Item {
   affiliateLink: string;
   quantity: number;
   price: number | null;
+  wiresNeeded?: number;
+  codeType?: string;
 }
 
 export default function Main() {
   const [selectedItems, setSelectedItems] = useState<Item[]>([]);
   const [totalPrice, setTotalPrice] = useState<number>(0);
 
-  // Use the defined Item type instead of 'any'
-  const toggleItem = (item: Item) => {
+  const toggleItem = (item: Omit<Item, "quantity">) => {
     setSelectedItems((prev) => {
       const exists = prev.find((i) => i.name === item.name);
       return exists
         ? prev.filter((i) => i.name !== item.name)
-        : [...prev, { ...item, quantity: 1, price: item.price }];
+        : [...prev, { ...item, quantity: 1 }];
     });
   };
 
@@ -73,7 +74,15 @@ export default function Main() {
             updateQuantity={updateQuantity}
           />
           <ItemSelection
-            Items={Items}
+            Items={Object.fromEntries(
+              Object.entries(Items).map(([category, categoryItems]) => [
+                category,
+                categoryItems.map((item) => ({
+                  ...item,
+                  quantity: 1, // ✅ Ensures every item has a quantity before passing
+                })),
+              ])
+            )}
             toggleItem={toggleItem}
             selectedItems={selectedItems}
           />

@@ -9,7 +9,7 @@ interface SelectedItemType {
   affiliateLink: string;
   quantity: number;
   price: number | null;
-  wiresNeeded?: number; // ✅ Added to track wire count
+  wiresNeeded?: number; // Added to track wire count
 }
 
 interface SelectedItemsProps {

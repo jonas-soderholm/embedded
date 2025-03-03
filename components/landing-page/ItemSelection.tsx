@@ -9,11 +9,12 @@ interface ItemType {
   price: number | null;
   wiresNeeded?: number;
   codeType?: string;
+  quantity: number;
 }
 
 interface ItemSelectionProps {
   Items: Record<string, ItemType[]>;
-  toggleItem: (item: ItemType) => void;
+  toggleItem: (item: Omit<ItemType, "quantity">) => void;
   selectedItems: ItemType[];
 }
 
@@ -29,30 +30,25 @@ export default function ItemSelection({
 
         const scrollLeft = () => {
           if (containerRef.current) {
-            console.log(`Scrolling left for ${category}`);
             containerRef.current.scrollBy({ left: -300, behavior: "smooth" });
           }
         };
 
         const scrollRight = () => {
           if (containerRef.current) {
-            console.log(`Scrolling right for ${category}`);
             containerRef.current.scrollBy({ left: 300, behavior: "smooth" });
           }
         };
 
         return (
           <div key={category} className="mb-8">
-            {/* Category Header */}
             <div className="text-sm flex items-center gap-4 justify-center">
               <div className="header-color py-1 mt-10 absolute retro-shadow-items px-2 z-40">
                 [{category.toUpperCase()}]
               </div>
             </div>
 
-            {/* Scrollable Row */}
             <div className="relative">
-              {/* Left Scroll Button */}
               <button
                 onClick={scrollLeft}
                 className="absolute hover:cursor-pointer left-0 top-1/2 transform -translate-y-1/2 bg-button p-2 text-color z-40 border border-color"
@@ -60,7 +56,6 @@ export default function ItemSelection({
                 {"<"}
               </button>
 
-              {/* Item List (Horizontal Scroll) */}
               <div
                 ref={containerRef}
                 className="flex flex-row gap-6 overflow-x-auto p-6 border-color-items pt-8 w-full custom-scrollbar mt-5"
@@ -76,18 +71,15 @@ export default function ItemSelection({
                         : "border-slate-300 bg-slate-900"
                     }`}
                   >
-                    {/* Image on Left */}
                     <img
                       src={item.image}
                       alt={item.name}
                       className="h-20 w-20 object-contain mr-4"
                     />
 
-                    {/* Text Content on Right (Centered) */}
                     <div className="flex flex-col items-start justify-center">
                       <p className="text-xs leading-tight">{item.name}</p>
 
-                      {/* Show Code Type if Microcontroller */}
                       {item.codeType && (
                         <p className="text-xs text-gray-400">
                           <span className="font-bold">Code:</span>{" "}
@@ -95,7 +87,6 @@ export default function ItemSelection({
                         </p>
                       )}
 
-                      {/* Display Required Wires (if applicable) */}
                       {item.wiresNeeded !== undefined && (
                         <p className="text-xs flex-row text-gray-400">
                           <span className="font-bold wire-color">
@@ -104,7 +95,6 @@ export default function ItemSelection({
                         </p>
                       )}
 
-                      {/* Display Price */}
                       <p className="text-xs text-gray-400">
                         <span className="font-bold">Price:</span>{" "}
                         {item.price !== null
@@ -116,7 +106,6 @@ export default function ItemSelection({
                 ))}
               </div>
 
-              {/* Right Scroll Button */}
               <button
                 onClick={scrollRight}
                 className="absolute hover:cursor-pointer right-0 top-1/2 transform -translate-y-1/2 bg-button p-2 text-color z-40 border border-color"
