@@ -63,13 +63,15 @@ export default function ItemSelection({
 
             <div
               ref={setRef(category)}
-              className="flex flex-row md:gap-6 gap-4 overflow-x-auto md:p-6 p-4 md:pt-8 pt-6 border-color-items w-full custom-scrollbar mt-5 md:text-xs text-[10px] "
+              className="flex flex-row md:gap-6 gap-4 overflow-x-auto md:p-6 p-5  md:pt-8 pt-6 border-color-items w-full custom-scrollbar mt-5 md:text-xs text-[10px] "
               style={{ overflowX: "auto", scrollBehavior: "smooth" }}
             >
               {categoryItems.map((item) => (
                 <div
                   key={item.name}
-                  onClick={() => toggleItem(item)}
+                  onPointerDown={() =>
+                    toggleItem(item)
+                  } /* Works for touch and mouse */
                   className={`cursor-pointer md:p-4 px-2 text-color border text-left md:w-[350px] w-[200px] h-[170px] md:min-w-[350px] min-w-[200px] flex flex-row items-center justify-center retro-shadow-items hover:bg-slate-700 transition-colors ${
                     selectedItems.some((i) => i.name === item.name)
                       ? "border-slate-500 bg-slate-700 bg-opacity-80"
