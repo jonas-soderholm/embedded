@@ -97,7 +97,7 @@ export default function SelectedItems({
                   <p className="text-xs text-gray-400">
                     <span className="font-bold">Wires Needed:</span>{" "}
                     {item.wiresNeeded * item.quantity}
-                  </p> asdasd
+                  </p>
                 )} */}
 
                 {/*  Price Calculation */}

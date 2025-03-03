@@ -72,7 +72,7 @@ export default function ItemSelection({
                   onPointerDown={() =>
                     toggleItem(item)
                   } /* Works for touch and mouse */
-                  className={`cursor-pointer md:p-4 px-2 text-color border text-left md:w-[350px] w-[200px] h-[170px] md:min-w-[350px] min-w-[200px] flex flex-row items-center justify-center retro-shadow-items hover:bg-slate-700 transition-colors ${
+                  className={`cursor-pointer md:p-4 px-2 text-color border text-left md:w-[350px] w-[200px] h-[170px] md:min-w-[350px] min-w-[200px] flex flex-row items-center justify-center retro-shadow-items md:hover:bg-slate-700 transition-colors ${
                     selectedItems.some((i) => i.name === item.name)
                       ? "border-slate-500 bg-slate-700 bg-opacity-80"
                       : "border-slate-300 bg-slate-900"
