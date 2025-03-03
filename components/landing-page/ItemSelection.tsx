@@ -124,7 +124,6 @@
 //     </>
 //   );
 // }
-
 "use client";
 
 import React, { useRef, useState } from "react";
@@ -173,13 +172,12 @@ export default function ItemSelection({
   };
 
   const handlePointerDown = (event: React.PointerEvent) => {
-    setStartX(event.clientX || event.touches?.[0]?.clientX || 0);
+    setStartX(event.clientX);
     setIsDragging(false);
   };
 
   const handlePointerMove = (event: React.PointerEvent) => {
-    const currentX = event.clientX || event.touches?.[0]?.clientX || 0;
-    if (Math.abs(currentX - startX) > 10) {
+    if (Math.abs(event.clientX - startX) > 10) {
       setIsDragging(true);
     }
   };
